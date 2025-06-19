@@ -2,6 +2,7 @@ package models;
 
 public class Horaire {
     public static final int NBRE_DE_BLOCS = 6;
+    //MR attribut en final
     private Bloc[] blocs;
 
     public Horaire() {
@@ -31,6 +32,7 @@ public class Horaire {
             if (!resultat) {
                 break;
             }
+            //MR Il manque la deuxième partie qui est de planifer dans le bloc
         }
         return resultat;
     }
@@ -47,6 +49,7 @@ public class Horaire {
         for (int i = 0; i < blocs.length; i++) {
             resultat = blocs[i].ContientModule(module);
             if (resultat) {
+                //MR Ici il faut directement donner la référence du bloc et pas en recréer un autre
                 bloco = new Bloc(blocs[i].getNom());
                 break;
             }

@@ -12,6 +12,7 @@ public class ServiceFormationMaitres {
                     break;
                 }
             } while (true);
+            //MR Boucle infini, code pas fonctionnel
 
         }
     }
@@ -20,7 +21,9 @@ public class ServiceFormationMaitres {
         boolean resultat = false;
         for (int i = 0; i < modules.length; i++) {
             for (int j = 0; j < profs.length; j++) {
+                //MR Il faut utiliser la méthode enseigneDejaCeModule()
                 if (profs[j].getModulesEnseignes().equals(modules)) {
+                    //MR Et resultat tu ne le mets pas à true ?
                     break;
                 }
             }

@@ -1,6 +1,7 @@
 package models;
 
 public class ModuleInfo {
+    //MR Manque le final
     private String nom;
     private Professeur professeur;
 
@@ -23,6 +24,7 @@ public class ModuleInfo {
 
     @Override
     public String toString() {
+        //MR Pourquoi 122 ?
         String total = null;
         if (professeur == null) {
             total = "122";

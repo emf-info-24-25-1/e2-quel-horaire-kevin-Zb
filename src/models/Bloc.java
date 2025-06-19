@@ -7,6 +7,7 @@ import java.util.Locale;
 public class Bloc {
     public static final int NBRE_DEMI_JOUR_SEMAINE = 10;
 
+    //MR Les attributs doivent être final
     private String nom;
     private ModuleInfo[] modules;
 
@@ -19,6 +20,7 @@ public class Bloc {
         }
     }
 
+        //MR Ta méthode est juste, mais si il n'y a pas assez de place, il planifie tout de même les premiers modules
     public boolean planifierModule(ModuleInfo module) {
         boolean resultat = false;
         int nbreTrouve = 0;
@@ -64,6 +66,7 @@ public class Bloc {
     public boolean ContientModule(ModuleInfo module) {
         boolean resultat = false;
         for (int i = 0; i < modules.length; i++) {
+            //MR Utilisation ici de == plutôt que equals
             if (modules[i].equals(module)) {
                 resultat = true;
                 break;
